@@ -19,8 +19,8 @@ Tools
 •	Kotlin: The primary programming language.
 •	Gradle: Build system.
 •	Jetpack Compose: For Android-specific UI components.
-•	Ktor or Retrofit (Optional): For API calls (depending on your preference).
-•	SQLDelight or Room (Optional): For local data persistence.
+•	Ktor: For API calls (depending on your preference).
+•	Room: For local data persistence.
 
 Project Structure
 
@@ -31,43 +31,31 @@ The project follows a clean architecture pattern:
 •	di: Dependency injection modules configured with Koin.
 
 How to Run the Project
-1.	Clone the Repository:
+1. Clone the Repository:
+   git clone <repository-url>
+   cd book-search-app
 
-git clone <repository-url>
-cd book-search-app
-
-
-	2.	Setup Dependencies:
+2. Setup Dependencies:
 Ensure you have the required Kotlin Multiplatform setup and install dependencies using Gradle:
+   ./gradlew build
 
-./gradlew build
+3. Run the App:
+. For Android:
+   ./gradlew :androidApp:installDebug
 
-
-	3.	Run the App:
-	•	For Android:
-
-./gradlew :androidApp:installDebug
-
-
-	•	For iOS:
+• For iOS:
 Open the iosApp project in Xcode and run it on a simulator or device.
+
 •	For Desktop:
 Run the desktop module using your IDE.
 
 How to Use
 1.	Search for Books:
-•	Use the search bar to find books by entering a title, author, or keyword.
+•	Use the search bar to find books by entering a title.
 2.	View Details:
 •	Tap on a book from the search results to view its detailed information.
 3.	Manage Favorites:
 •	Add a book to your favorites by tapping the “Add to Favorites” button.
 •	Access your favorite books through the Favorites tab.
-
-Contribution
-
-We welcome contributions to this project! To contribute:
-1.	Fork the repository.
-2.	Create a new branch for your feature or bug fix.
-3.	Commit your changes and submit a pull request.
 
 Happy coding! 🚀
