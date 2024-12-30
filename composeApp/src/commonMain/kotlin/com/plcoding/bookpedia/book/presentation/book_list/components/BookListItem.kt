@@ -57,7 +57,9 @@ fun BookListItem (
         Row(
             modifier = Modifier
                 .padding(16.dp)
-                .height(IntrinsicSize.Min)
+                .height(IntrinsicSize.Min),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Box(
                 modifier = Modifier.height(100.dp),
@@ -133,12 +135,12 @@ fun BookListItem (
                         )
                     }
                 }
-                Icon(
-                    imageVector = Icons.AutoMirrored.Default.KeyboardArrowRight,
-                    contentDescription = null,
-                    modifier = Modifier.size(36.dp)
-                )
             }
+            Icon(
+                imageVector = Icons.AutoMirrored.Default.KeyboardArrowRight,
+                contentDescription = null,
+                modifier = Modifier.size(36.dp)
+            )
         }
     }
 
