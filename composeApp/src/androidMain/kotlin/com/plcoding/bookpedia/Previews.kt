@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.plcoding.bookpedia.book.domain.Book
 import com.plcoding.bookpedia.book.presentation.book_list.BookListState
-import com.plcoding.bookpedia.book.presentation.book_list.books
 
 @Preview
 @Composable
@@ -40,5 +40,21 @@ private fun BookListScreenPreview() {
             searchResults = books,
         ),
         onAction = {}
+    )
+}
+
+private val books = (1..100).map {
+    Book(
+        id = it.toString(),
+        title = "Book $it",
+        imageUrl = "https://",
+        authors = listOf("Masum Modi"),
+        description = "Description of book $it",
+        languages = emptyList(),
+        firstPublishYear = null,
+        averageRating = 4.67845,
+        ratingsCount = 5,
+        numPages = 100,
+        numEdition = 3
     )
 }
